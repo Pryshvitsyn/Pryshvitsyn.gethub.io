@@ -2,103 +2,116 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header p {
-    margin: 0;
-}
-
-nav {
-    background: #444;
-    color: #fff;
-    padding: 10px 0;
+#about, #problematic, #gallery, #contact {
+    padding: 2em;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+#problematic ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    display: inline-block;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.2s;
 }
 
-section {
-    padding: 20px 0;
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
-section h2 {
-    color: #333;
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-media {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-media a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.social-media a img:hover {
+    transform: scale(1.1);
 }
 
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
 
 form label {
-    margin-top: 10px;
+    margin-bottom: 0.5em;
 }
 
-form input, form textarea {
-    padding: 10px;
-    margin-top: 5px;
+form input, form textarea, form button {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+    max-width: 300px;
 }
 
 form button {
-    padding: 10px;
-    margin-top: 10px;
-    background: #333;
-    color: #fff;
+    background-color: #4CAF50;
+    color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 form button:hover {
-    background: #555;
+    background-color: #45a049;
 }
 
-.hidden {
-    display: none;
+@media (min-width: 600px) {
+    .gallery img {
+        max-width: 45%;
+    }
 }
 
-#formFeedback {
-    margin-top: 10px;
-    color: green;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer p {
-    margin: 0;
+@media (min-width: 768px) {
+    .gallery img {
+        max-width: 30%;
+    }
 }
